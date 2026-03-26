@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Principal — Proyecto Final</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+
+  <div class="sidebar-overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-logo">
+        <div class="brand-icon">🚀</div>
+        <div>
+          <div class="brand-name">DataStore</div>
+          <div class="brand-tagline">Panel de gestión</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-user">
+      <div class="user-avatar">AD</div>
+      <div class="user-info">
+        <div class="user-name">Admin User</div>
+        <div class="user-role">Administrador</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Principal</div>
+      <a href="index.html" class="nav-link active">
+        <span class="nav-icon">⊞</span> Dashboard
+      </a>
+      <a href="productos.html" class="nav-link">
+        <span class="nav-icon">◫</span> Productos
+        <span class="nav-badge">8</span>
+      </a>
+
+      <div class="nav-section-label">Gestión</div>
+      <a href="#" class="nav-link"><span class="nav-icon">◯</span> Clientes</a>
+      <a href="#" class="nav-link"><span class="nav-icon">△</span> Pedidos</a>
+      <a href="#" class="nav-link"><span class="nav-icon">◻</span> Inventario</a>
+
+      <div class="nav-section-label">Sistema</div>
+      <a href="#" class="nav-link"><span class="nav-icon">⊙</span> Reportes</a>
+      <a href="#" class="nav-link"><span class="nav-icon">◈</span> Configuración</a>
+    </nav>
+
+    <div class="sidebar-footer">&copy; 2025 DataStore Inc.</div>
+  </aside>
+
+  <!-- CONTENIDO -->
+  <main class="main-content">
+
+    <div class="page-header">
+      <p class="page-breadcrumb">Inicio / <span>Dashboard</span></p>
+      <h1 class="page-title">Panel Principal</h1>
+      <p class="page-subtitle">Resumen general del sistema y actividad reciente.</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">💰</div>
+        <div class="stat-label">Ventas Totales</div>
+        <div class="stat-value">$84k</div>
+        <div class="stat-change up">↑ 12.4% este mes</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">📦</div>
+        <div class="stat-label">Productos</div>
+        <div class="stat-value">148</div>
+        <div class="stat-change up">↑ 3 nuevos</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">👥</div>
+        <div class="stat-label">Clientes</div>
+        <div class="stat-value">2.3k</div>
+        <div class="stat-change up">↑ 8.1% mensual</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">↩️</div>
+        <div class="stat-label">Devoluciones</div>
+        <div class="stat-value">14</div>
+        <div class="stat-change down">↓ 2 pendientes</div>
+      </div>
+    </div>
+
+    <!-- Imágenes -->
+    <h2 class="section-title"><span class="title-dot"></span>Destacados del Mes</h2>
+
+    <div class="images-grid">
+      <div class="image-card">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Colección Montaña"/>
+        </div>
+        <div class="image-card-body">
+          <div class="image-card-title">Colección Montaña</div>
+          <div class="image-card-meta">Productos outdoor — Temporada 2025</div>
+        </div>
+      </div>
+      <div class="image-card">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80" alt="Nueva Sucursal"/>
+        </div>
+        <div class="image-card-body">
+          <div class="image-card-title">Nueva Sucursal</div>
+          <div class="image-card-meta">Apertura centro comercial — Marzo 2025</div>
+        </div>
+      </div>
+      <div class="image-card">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&q=80" alt="Tech Collection"/>
+        </div>
+        <div class="image-card-body">
+          <div class="image-card-title">Tech Collection</div>
+          <div class="image-card-meta">Gadgets y accesorios — Lanzamiento</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabla -->
+    <h2 class="section-title"><span class="title-dot"></span>Pedidos Recientes</h2>
+
+    <div class="table-section">
+      <div class="table-header">
+        <span class="table-title">Últimas transacciones</span>
+        <div class="table-actions">
+          <button class="btn btn-outline">⬇ Exportar</button>
+          <a href="productos.html" class="btn btn-primary">Ver Productos →</a>
+        </div>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID Pedido</th>
+              <th>Cliente</th>
+              <th>Producto</th>
+              <th>Fecha</th>
+              <th>Total</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>#ORD-001</code></td>
+              <td>Ana García</td>
+              <td>Laptop Pro 15"</td>
+              <td>18 Mar 2025</td>
+              <td><strong>$1,249.00</strong></td>
+              <td><span class="badge badge-success">Entregado</span></td>
+            </tr>
+            <tr>
+              <td><code>#ORD-002</code></td>
+              <td>Luis Martínez</td>
+              <td>Auriculares BT</td>
+              <td>19 Mar 2025</td>
+              <td><strong>$89.00</strong></td>
+              <td><span class="badge badge-warning">En tránsito</span></td>
+            </tr>
+            <tr>
+              <td><code>#ORD-003</code></td>
+              <td>Carmen López</td>
+              <td>Silla Ergonómica</td>
+              <td>20 Mar 2025</td>
+              <td><strong>$340.00</strong></td>
+              <td><span class="badge badge-info">Procesando</span></td>
+            </tr>
+            <tr>
+              <td><code>#ORD-004</code></td>
+              <td>Pedro Sánchez</td>
+              <td>Monitor 4K</td>
+              <td>21 Mar 2025</td>
+              <td><strong>$520.00</strong></td>
+              <td><span class="badge badge-success">Entregado</span></td>
+            </tr>
+            <tr>
+              <td><code>#ORD-005</code></td>
+              <td>María Torres</td>
+              <td>Teclado Mecánico</td>
+              <td>22 Mar 2025</td>
+              <td><strong>$135.00</strong></td>
+              <td><span class="badge badge-danger">Cancelado</span></td>
+            </tr>
+            <tr>
+              <td><code>#ORD-006</code></td>
+              <td>Jorge Ruiz</td>
+              <td>Webcam HD</td>
+              <td>23 Mar 2025</td>
+              <td><strong>$75.00</strong></td>
+              <td><span class="badge badge-warning">En tránsito</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-footer">
+        <span>Mostrando 6 de 24 pedidos</span>
+        <div class="pagination">
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">›</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <span>Proyecto Final — Diseño Web Responsivo 2025</span>
+      <span>HTML5 · CSS3 · JS Vanilla</span>
+    </footer>
+
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById('overlay').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
