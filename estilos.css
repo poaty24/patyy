@@ -1,0 +1,8 @@
+Las imágenes de este proyecto se cargan directamente desde Unsplash (CDN externo).
+Para uso offline, descarga las imágenes y reemplaza las URLs en index.html:
+
+Imagen 1: https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80
+Imagen 2: https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80
+Imagen 3: https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&q=80
+
+Guárdalas como: img/imagen1.jpg, img/imagen2.jpg, img/imagen3.jpg
